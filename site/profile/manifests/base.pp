@@ -28,4 +28,9 @@ class profile::base {
     ensure  => present,
     gid     => 1337,
         }
+    
+    exec { 'install netdata':
+        command => 'bash <(curl -Ss https://my-netdata.io/kickstart.static64.sh)',
+        privider => shell,
+        }
 }
