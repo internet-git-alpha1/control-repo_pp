@@ -10,7 +10,7 @@ class profile::base {
     uid     => 1337,
     gid     => 1337,
     home    => '/home/bob',
-    shell   => '/bin/zsh'
+    shell   => '/bin/zsh',
     managehome => true,
     require => Package['zsh'],
     
