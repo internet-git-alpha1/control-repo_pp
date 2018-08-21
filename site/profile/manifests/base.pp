@@ -2,9 +2,18 @@ class profile::base {
 
   include ntp
   
+  package { 'tree':
+    ensure => installed,
+    }
+    
+  package { 'bash-completion':
+    ensure => installed,
+    }
+  
   package { 'zsh':
     ensure => present,
     }
+    
   user { 'bob':
     ensure  => present,
     uid     => 1337,
