@@ -6,7 +6,7 @@ class profile::base {
     ensure => present,
     }
   user { 'bob':
-    endure  => present,
+    ensure  => present,
     uid     => 1337,
     gid     => 1337,
     home    => '/home/bob',
