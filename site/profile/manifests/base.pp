@@ -22,7 +22,7 @@ class profile::base {
     ensure     => present,
     uid        => 1337,
     gid        => 1337,
-    home       => '/home/shaq',
+    home       => '/home/bob',
     shell      => '/bin/zsh',
     managehome => true,
     require    => Package['zsh']
