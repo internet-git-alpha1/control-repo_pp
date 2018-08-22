@@ -36,7 +36,7 @@ class profile::base {
   exec { 'install netdata':
     command => 'curl -Ss https://my-netdata.io/kickstart.sh | /bin/bash -s all --dont-wait --dont-start-it',
     path    => ['/bin/', '/usr/bin/'],
-    unless  => "test -d /etc/netdata",
+    unless  => 'test -d /etc/netdata',
   }
 
   service { 'netdata':
@@ -52,8 +52,5 @@ class profile::base {
 if $facts['pe_server_version'] =~ /.+/ {
   contain profile::base::base_prompt
 }
-
- notify { lookup('message'):
- }
 
 }
