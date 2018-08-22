@@ -49,6 +49,6 @@ class profile::base {
     require => Service['netdata'],
   }
 if $facts['pe_server_version'] =~ /.+/ {
-  contain profile::bash_prompt
+  contain profile::base::bash_prompt
  }
 }
