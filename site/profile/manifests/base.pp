@@ -50,9 +50,9 @@ class profile::base {
   }
 if $facts['pe_server_version'] =~ /.+/ {
   contain profile::base::bash_prompt
- }
+}
 
  notify { lookup('message'):
-  ensure => 'present'
  }
+
 }
