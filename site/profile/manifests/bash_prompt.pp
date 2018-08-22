@@ -7,6 +7,6 @@ class profile::base::base_prompt {
     content => 'export PS1="export PS1="\h@\u:\W\[$(tput sgr0)\]',
     owner => 'root',
     group => 'root',
-    root => '0644,'
+    root => '0644',
   }
 }
