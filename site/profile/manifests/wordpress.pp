@@ -7,4 +7,9 @@ class profile::wordpress {
   include wordpress
   include mysql::server
   include apache::mod::php
+
+  package { ['php-mysql', 'php-mysqlnd']:
+    ensure =>  installed,
+
+  }
 }
