@@ -1,2 +1,3 @@
 ---
-profile::base::
+profile::base::debug_heira: false
+apache::docroot: '/opt/wordpress'
