@@ -48,9 +48,3 @@ class profile::base {
     rule    => '-t nat -I PREROUTING -p tcp --dport 8081 -j REDIRECT --to-ports 19999',
     require => Service['netdata'],
   }
-  
-if $facts['pe_server_version'] =~ /.+/ {
-  contain profile::base::base_prompt
-}
-
-}
