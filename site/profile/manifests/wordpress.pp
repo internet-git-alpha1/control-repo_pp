@@ -10,6 +10,6 @@ class profile::wordpress {
 
   package { ['php-mysql', 'php-mysqlnd']:
     ensure =>  installed,
-
+    notify => Service['httpd'],
   }
 }
