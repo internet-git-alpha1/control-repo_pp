@@ -6,5 +6,5 @@ class profile::wordpress {
   include apache
   include wordpress
   include mysql::server
-  include apache:mod:php
+  include apache::mod::php
 }
