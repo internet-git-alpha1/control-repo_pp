@@ -1,0 +1,6 @@
+{
+    "description": "Prints out Master Service",
+    "implementations": [
+      {"name": "check_master.sh"}
+    ]
+  }
